@@ -16,7 +16,7 @@ task wrapper(type: Wrapper) {
 }
 
 ext {
-    imdgVersion = '4.0-SNAPSHOT'
+    imdgVersion = '21.0.0-SNAPSHOT'
 }
 
 
