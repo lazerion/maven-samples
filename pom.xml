@@ -20,6 +20,10 @@
             <id>nexus-snapshots</id>
             <url>http://localhost:9999/nexus/content/repositories/snapshots</url>
         </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://localhost:9999/nexus/content/repositories/releases</url>
+        </repository>
     </distributionManagement>
 
     <build>
@@ -40,7 +44,7 @@
                 <configuration>
                     <serverId>nexus</serverId>
                     <nexusUrl>http://localhost:9999/nexus/</nexusUrl>
-                    <skipStaging>true</skipStaging>
+                    <skipStaging>false</skipStaging>
                 </configuration>
             </plugin>
         </plugins>

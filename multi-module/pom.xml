@@ -28,14 +28,6 @@
         <module>webapp</module>
     </modules>
 
-    <distributionManagement>
-        <site>
-            <id>site-server</id>
-            <name>Test Project Site</name>
-            <url>file:///tmp/multi-module-site</url>
-        </site>
-    </distributionManagement>
-
     <build>
         <plugins>
             <plugin>
