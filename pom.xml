@@ -16,15 +16,31 @@
     </modules>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <url>http://localhost:9999/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>nexus-releases</id>
-            <url>http://localhost:9999/nexus/content/repositories/releases</url>
+            <id>release-repository</id>
+            <url>http://localhost:9999/nexus/service/local/staging/deploy/maven2</url>
         </repository>
+        <snapshotRepository>
+            <id>snapshot-repository</id>
+            <name>Maven2 Snapshot Repository</name>
+            <url>http://localhost:9999/nexus/content/repositories/snapshots</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
     </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>snapshot-repository</id>
+            <name>Maven2 Snapshot Repository</name>
+            <url>http://localhost:9999/nexus/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
@@ -32,19 +48,11 @@
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
                 <version>1.6.3</version>
-                <executions>
-                    <execution>
-                        <id>default-deploy</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <extensions>true</extensions>
                 <configuration>
                     <serverId>nexus</serverId>
                     <nexusUrl>http://localhost:9999/nexus/</nexusUrl>
-                    <skipStaging>false</skipStaging>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
         </plugins>
