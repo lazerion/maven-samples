@@ -9,6 +9,11 @@
             <username>deployment</username>
             <password>deployment123</password>
         </server>
+        <server>
+            <id>nexus-releases</id>
+            <username>deployment</username>
+            <password>deployment123</password>
+        </server>
     </servers>
 
 </settings>

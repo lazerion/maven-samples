@@ -6,13 +6,13 @@
     <parent>
         <groupId>com.example.maven-samples</groupId>
         <artifactId>parent</artifactId>
-        <version>11.22.0-SNAPSHOT</version>
+        <version>42.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>multi-module-parent</artifactId>
     <packaging>pom</packaging>
-    <version>11.22.0-SNAPSHOT</version>
+    <version>42.0.0</version>
     <name>Multi Module Project Parent</name>
     <description>Sample multi module Maven project with a working, deployable site.</description>
     <url>http://www.example.com</url>
@@ -25,7 +25,6 @@
 
     <modules>
         <module>server</module>
-        <module>webapp</module>
     </modules>
 
     <build>
@@ -35,50 +34,6 @@
                 <configuration>
                     <source>1.6</source>
                     <target>1.6</target>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <artifactId>maven-release-plugin</artifactId>
-                <configuration>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <artifactId>maven-site-plugin</artifactId>
-                <configuration>
-                    <reportPlugins>
-                        <plugin>
-                            <artifactId>maven-checkstyle-plugin</artifactId>
-                        </plugin>
-
-                        <plugin>
-                            <artifactId>maven-jxr-plugin</artifactId>
-                        </plugin>
-
-                        <plugin>
-                            <artifactId>maven-javadoc-plugin</artifactId>
-                        </plugin>
-
-                        <plugin>
-                            <artifactId>maven-pmd-plugin</artifactId>
-                        </plugin>
-
-                        <plugin>
-                            <artifactId>maven-surefire-report-plugin</artifactId>
-                        </plugin>
-
-                        <plugin>
-                            <groupId>org.codehaus.mojo</groupId>
-                            <artifactId>findbugs-maven-plugin</artifactId>
-                        </plugin>
-
-                        <plugin>
-                            <groupId>org.codehaus.mojo</groupId>
-                            <artifactId>taglist-maven-plugin</artifactId>
-                        </plugin>
-                    </reportPlugins>
                 </configuration>
             </plugin>
         </plugins>
@@ -204,13 +159,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <scm>
-        <connection>scm:git:git@github.com:gabrielf/maven-samples.git</connection>
-        <developerConnection>scm:git:git@github.com:gabrielf/maven-samples.git</developerConnection>
-        <tag>HEAD</tag>
-        <url>http://github.com/gabrielf/maven-samples</url>
-    </scm>
 
     <prerequisites>
         <maven>3.0.3</maven>
