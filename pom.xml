@@ -10,6 +10,24 @@
     <name>maven-samples-parent</name>
     <description>Just a pom that makes it easy to build both projects at the same time.</description>
 
+    <properties>
+        <main.basedir>${project.basedir}</main.basedir>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <jdk.version>1.8</jdk.version>
+        <jdk.integration.version>1.8</jdk.integration.version>
+
+        <hazelcast.version>4.0-SNAPSHOT</hazelcast.version>
+        <hazelcast-jet.version>0.4</hazelcast-jet.version>
+        <hazelcast-jclouds.version>3.7</hazelcast-jclouds.version>
+
+        <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
+        <maven.checkstyle.plugin.version>2.15</maven.checkstyle.plugin.version>
+        <maven.assembly.plugin.version>3.0.0</maven.assembly.plugin.version>
+        
+        <lombok.version>1.16.22</lombok.version>
+    </properties>
+         
     <modules>
         <module>single-module</module>
         <module>multi-module</module>
