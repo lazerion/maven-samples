@@ -22,4 +22,6 @@ http\://www.hazelcast.com/schema/spring/hazelcast-spring-4.0.xsd=hazelcast-sprin
 https\://www.hazelcast.com/schema/spring/hazelcast-spring-4.0.xsd=hazelcast-spring-42.38.xsd
 http\://www.hazelcast.com/schema/spring/hazelcast-spring-4.0.xsd=hazelcast-spring-42.39.xsd
 https\://www.hazelcast.com/schema/spring/hazelcast-spring-4.0.xsd=hazelcast-spring-42.39.xsd
-http\://www.hazelcast.com/schema/spring/hazelcast-spring.xsd=hazelcast-spring-42.39.xsd
+http\://www.hazelcast.com/schema/spring/hazelcast-spring-4.0.xsd=hazelcast-spring-42.40.xsd
+https\://www.hazelcast.com/schema/spring/hazelcast-spring-4.0.xsd=hazelcast-spring-42.40.xsd
+http\://www.hazelcast.com/schema/spring/hazelcast-spring.xsd=hazelcast-spring-42.40.xsd
