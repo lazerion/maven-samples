@@ -13,6 +13,7 @@
     <modules>
         <module>single-module</module>
         <module>multi-module</module>
+        <module>hazelcast</module>
     </modules>
 
     <scm>
